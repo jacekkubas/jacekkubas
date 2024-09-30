@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import useMousePosition from "@/app/utils/useMousePosition";
 import "./style.css";
 import { motion } from "framer-motion";
+import Link from "./Link";
 
 const data = [
   {
@@ -58,35 +59,29 @@ const Projects = () => {
   }, [target]);
 
   return (
-    <div className="py-24 image-wrapper">
-      {/* <h2 className="text-5xl mb-16">Projects</h2> */}
-      <div className="border-t border-gray-500">
-        <motion.div
-          ref={image}
-          className="image"
-          animate={{
-            y: y + 10,
-            x: x + 10,
-            position: "fixed",
-          }}
-          transition={{
-            type: "tween",
-            ease: "backOut",
-          }}
-        />
-        {data.map((project, i) => {
-          return (
-            <a
-              key={i}
-              className="image-link py-12 text-3xl border-gray-500 border-b block"
-              href={project.link}
-              target="_blank"
-              data-image={`/projects/${project.name.replace(/ /g, "")}.jpg`}
-            >
-              {project.name}
-            </a>
-          );
-        })}
+    <div className="overflow-hidden">
+      <div className="container mx-auto">
+        <div className="py-24 image-wrapper">
+          {/* <h2 className="text-5xl mb-16">Projects</h2> */}
+          <div className="border-t border-gray-500">
+            <motion.div
+              ref={image}
+              className="image"
+              animate={{
+                y: y - 50,
+                x: x + 50,
+                position: "fixed",
+              }}
+              transition={{
+                type: "tween",
+                ease: "backOut",
+              }}
+            />
+            {data.map((project, i) => {
+              return <Link key={i} data={project} image={image} />;
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );

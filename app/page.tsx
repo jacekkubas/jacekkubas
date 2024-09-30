@@ -3,10 +3,13 @@ import Header from "./components/Header";
 import TechStack from "./components/TechStack";
 import BigText from "./components/BigText";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import PreviewHero from "./components/GlassHero/Preview";
 
-const Scene = dynamic(() => import("./components/GlassHero/Scene"), {
+const GlassHero = dynamic(() => import("./components/GlassHero/Scene"), {
   ssr: false,
-  loading: () => <p>Loading...</p>,
+  loading: () => <PreviewHero />,
 });
 
 const Home: React.FC = () => {
@@ -14,12 +17,22 @@ const Home: React.FC = () => {
     <div className="bg-black text-white">
       <Header />
       <div className="relative h-screen">
-        <Scene />
+        <GlassHero />
       </div>
       <div className="container mx-auto">
         <TechStack />
-        <BigText text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra quis ipsum quis aliquam. Aliquam venenatis dictum felis, vel malesuada dolor posuere eu. Vivamus feugiat condimentum lectus ac euismod. Integer aliquet velit eu elit dictum, eget pulvinar mi condimentum. Nulla at ornare nisl." />
-        <Projects />
+      </div>
+      <div className="container mx-auto">
+        <BigText text="I'm a web developer with over 10 years of experience. I’ve worked on a variety of projects, from small websites to complex digital platforms. This has given me the flexibility to meet both design and technical demands. Let’s work on something great together!" />
+      </div>
+
+      <Projects />
+
+      <div className="container mx-auto">
+        <Contact />
+      </div>
+      <div className="container mx-auto">
+        <Footer />
       </div>
     </div>
   );

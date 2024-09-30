@@ -7,7 +7,7 @@ const BigText = ({ text }: { text: string }) => {
   const paragraph = useRef(null);
   const { scrollYProgress } = useScroll({
     target: paragraph,
-    offset: ["start 0.6", "end end"],
+    offset: ["start 0.6", "end 0.6"],
   });
 
   const words = text.split(" ");
@@ -16,6 +16,9 @@ const BigText = ({ text }: { text: string }) => {
     <p
       ref={paragraph}
       className="py-24 mx-auto font-bold text-6xl flex flex-wrap"
+      style={{
+        lineHeight: 1.15,
+      }}
     >
       {words.map((word, i) => {
         const start = i / words.length;

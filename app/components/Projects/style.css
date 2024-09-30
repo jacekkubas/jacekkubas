@@ -12,8 +12,41 @@
   display: none;
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 3;
 
   &.active {
     display: block;
+  }
+}
+
+.image-link {
+  position: relative;
+
+  &:hover {
+    color: #000;
+
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &:before {
+    content: "";
+    width: 100vw;
+    height: calc(100% + 2px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d1d5db;
+    border-top: solid 1px #d1d5db;
+    border-bottom: solid 1px #d1d5db;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  span {
+    position: relative;
+    z-index: 2;
   }
 }
