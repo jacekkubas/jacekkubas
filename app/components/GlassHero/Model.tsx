@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef } from "react";
 import {
   Environment,
   useGLTF,
@@ -15,23 +15,42 @@ const Model = () => {
   const mesh3 = useRef<Mesh>(null);
   const { nodes } = useGLTF("/shapes.glb");
   const { viewport, camera, pointer } = useThree();
+  const cameraZ = 5;
 
   useFrame(() => {
+    const alpha = 0.01;
     let y =
       Math.abs(pointer.x) > Math.abs(pointer.y)
         ? Math.abs(pointer.x)
         : Math.abs(pointer.y);
 
-    // top bottom
-    camera.position.y = pointer.y; // 0.5
-    camera.rotation.x = pointer.y * -0.2; // 0.1
+    const curPosX = camera.position.x;
+    const curPosY = camera.position.y;
+    const curPosZ = camera.position.z;
+
+    const curRotX = camera.rotation.x;
+    const curRotY = camera.rotation.y;
+
+    const finalPosX = pointer.x * -2.5;
+    const finalPosY = pointer.y;
+    const finalPosZ = cameraZ - y;
+
+    const finalRotX = pointer.y * -0.2;
+    const finalRotY = pointer.x / -2;
 
     // left right
-    camera.position.x = pointer.x * -2.5; // 2
-    camera.rotation.y = pointer.x / -2; // 0.5
+    camera.position.x = curPosX + (finalPosX - curPosX) * alpha;
+    camera.rotation.y = curRotY + (finalRotY - curRotY) * alpha;
+
+    //top bottom
+    camera.position.y = curPosY + (finalPosY - curPosY) * alpha;
+    camera.rotation.x = curRotX + (finalRotX - curRotX) * alpha;
 
     // in out
-    camera.position.z = 5 - y; // 4
+    camera.position.z = curPosZ + (finalPosZ - curPosZ) * alpha;
+
+    // lerp
+    // current_value = start_value + (end_value - start_value) * a
   });
 
   useFrame(() => {
