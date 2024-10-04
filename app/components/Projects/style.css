@@ -3,8 +3,8 @@
 }
 
 .image {
-  width: 300px;
-  height: 350px;
+  width: 337px;
+  height: 450px;
   background-color: transparent;
   /* position: absolute; */
   top: 0;
@@ -46,7 +46,7 @@
     transition: opacity 0.3s;
   }
 
-  span {
+  div {
     position: relative;
     z-index: 2;
   }

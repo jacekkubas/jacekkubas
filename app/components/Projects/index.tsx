@@ -7,45 +7,66 @@ import Link from "./Link";
 
 const data = [
   {
+    name: "Kewpie",
+    description: "Japan’s No.1 mayonnaise, crafted in Europe.",
+    link: "https://kewpie-europe.com/",
+  },
+  {
     name: "Tutticolori",
+    description: "It's a good day for Italian pizza.",
     link: "https://tutticolori.pl/",
   },
   {
     name: "Foundry",
+    description:
+      "Creatively driven makers, building leading brands that stand the test of time.",
     link: "https://foundry.ch",
   },
   {
     name: "Alpian",
+    description:
+      "Learn what school failed to teach you: Managing your finances.",
     link: "https://www.blog.alpian.com/",
   },
   {
     name: "Globfone",
+    description:
+      "Telecommunication services for free to users across the globe",
     link: "https://globfone.com/",
   },
   {
     name: "Golem",
+    description:
+      "Decentralized platform where everyone can share each other's computing power.",
     link: "https://www.golem.network/",
   },
   {
     name: "Legalfinder",
+    description: "Free, easy-to-use way of searching for a legal professional.",
     link: "https://www.legalfinder.lu",
   },
   {
     name: "Datamasters",
+    description:
+      "A team of experts with experience in building an e-commerce business.",
     link: "https://datamasters.pl/",
   },
   {
     name: "Imapp",
+    description:
+      "Security, transparency, automation, and efficiency through decentralized technologies.",
     link: "https://www.imapp.pl/",
   },
   {
     name: "Future of retail",
+    description:
+      "Create full transparency between connected partners to ensure the monetary and logistical flow.",
     link: "https://futureofretail.jkhost.eu/",
   },
 ];
 
 const Projects = () => {
-  const image = useRef(null);
+  const image = useRef(document.createElement("div"));
   const { x, y, target } = useMousePosition();
 
   useEffect(() => {
@@ -56,20 +77,20 @@ const Projects = () => {
     } else {
       image.current.classList.remove("active");
     }
-  }, [target]);
+  }, [target, image]);
 
   return (
     <div className="overflow-hidden">
       <div className="container mx-auto">
         <div className="py-24 image-wrapper">
-          {/* <h2 className="text-5xl mb-16">Projects</h2> */}
+          <h2 className="text-5xl mb-16">Selected Works</h2>
           <div className="border-t border-gray-500">
             <motion.div
               ref={image}
               className="image"
               animate={{
-                y: y - 50,
-                x: x + 50,
+                y: y - 100,
+                x: x + 80,
                 position: "fixed",
               }}
               transition={{
@@ -78,7 +99,7 @@ const Projects = () => {
               }}
             />
             {data.map((project, i) => {
-              return <Link key={i} data={project} image={image} />;
+              return <Link key={i} data={project} />;
             })}
           </div>
         </div>

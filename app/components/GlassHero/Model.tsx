@@ -19,10 +19,12 @@ const Model = () => {
 
   useFrame(() => {
     const alpha = 0.01;
+
     let y =
       Math.abs(pointer.x) > Math.abs(pointer.y)
         ? Math.abs(pointer.x)
-        : Math.abs(pointer.y);
+        : Math.abs(pointer.y < -1 ? -1 : pointer.y);
+    console.log(y);
 
     const curPosX = camera.position.x;
     const curPosY = camera.position.y;
@@ -32,10 +34,10 @@ const Model = () => {
     const curRotY = camera.rotation.y;
 
     const finalPosX = pointer.x * -2.5;
-    const finalPosY = pointer.y;
+    const finalPosY = pointer.y < -1 ? -1 : pointer.y;
     const finalPosZ = cameraZ - y;
 
-    const finalRotX = pointer.y * -0.2;
+    const finalRotX = pointer.y < -1 ? 0.2 : pointer.y * -0.2;
     const finalRotY = pointer.x / -2;
 
     // left right
@@ -45,6 +47,7 @@ const Model = () => {
     //top bottom
     camera.position.y = curPosY + (finalPosY - curPosY) * alpha;
     camera.rotation.x = curRotX + (finalRotX - curRotX) * alpha;
+    console.log(curRotX + (finalRotX - curRotX) * alpha);
 
     // in out
     camera.position.z = curPosZ + (finalPosZ - curPosZ) * alpha;
