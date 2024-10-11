@@ -4,32 +4,36 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="py-24">
-      <div className="flex justify-between">
+      <div className="md:flex justify-between">
         <div className="w-full">
-          {/* <Image
-            src="/images/shapes.jpg"
-            width={500}
-            height={500}
-            alt="Picture of the author"
-          /> */}
+          <div className="hidden md:block text-2xl font-bold">Jacek Kubas</div>
         </div>
-        <div className="w-full flex gap-40">
+        <div className="w-full flex gap-32 md:gap-40">
           <div>
             <div className="font-bold mb-6">Menu</div>
-            <a href="#" className="block mb-4 text-gray-300 hover:text-white">
+            <a
+              href="#home"
+              className="block mb-4 text-gray-300 hover:text-white"
+            >
+              Home
+            </a>
+            <a
+              href="#about"
+              className="block mb-4 text-gray-300 hover:text-white"
+            >
               About
             </a>
-            <a href="#" className="block mb-4 text-gray-300 hover:text-white">
+            <a
+              href="#projects"
+              className="block mb-4 text-gray-300 hover:text-white"
+            >
               Projects
-            </a>
-            <a href="#" className="block mb-4 text-gray-300 hover:text-white">
-              Contact
             </a>
           </div>
           <div>
             <div className="font-bold mb-6">Contact</div>
             <a href="#" className="block mb-4 text-gray-300 hover:text-white">
-              Get a Quote
+              Resume
             </a>
             <a href="#" className="block mb-4 text-gray-300 hover:text-white">
               Say Hi

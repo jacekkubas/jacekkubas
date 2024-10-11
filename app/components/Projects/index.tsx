@@ -80,7 +80,7 @@ const Projects = () => {
   }, [target, image]);
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden" id="projects">
       <div className="container mx-auto">
         <div className="py-24 image-wrapper">
           <h2 className="text-5xl mb-16">Selected Works</h2>

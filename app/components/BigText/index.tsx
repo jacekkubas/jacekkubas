@@ -13,27 +13,29 @@ const BigText = ({ text }: { text: string }) => {
   const words = text.split(" ");
 
   return (
-    <p
-      ref={paragraph}
-      className="py-24 mx-auto font-bold text-6xl flex flex-wrap"
-      style={{
-        lineHeight: 1.15,
-      }}
-    >
-      {words.map((word, i) => {
-        const start = i / words.length;
-        const end = start + 1 / words.length;
+    <div id="about">
+      <p
+        ref={paragraph}
+        className="py-24 mx-auto font-bold text-4xl flex flex-wrap md:text-6xl"
+        style={{
+          lineHeight: 1.15,
+        }}
+      >
+        {words.map((word, i) => {
+          const start = i / words.length;
+          const end = start + 1 / words.length;
 
-        return (
-          <Word
-            key={i}
-            text={word}
-            range={[start, end]}
-            progress={scrollYProgress}
-          />
-        );
-      })}
-    </p>
+          return (
+            <Word
+              key={i}
+              text={word}
+              range={[start, end]}
+              progress={scrollYProgress}
+            />
+          );
+        })}
+      </p>
+    </div>
   );
 };
 

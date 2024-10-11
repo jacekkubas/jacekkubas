@@ -4,8 +4,8 @@ import "./style.css";
 const TechStack = () => {
   return (
     <div className="text-center py-24">
-      <h2 className="text-4xl font-semibold mb-16">Cutting-Edge Tech Stack</h2>
-      <div className="flex gap-24 justify-center">
+      <h2 className="text-5xl mb-16">Cutting-Edge Tech Stack</h2>
+      <div className="flex flex-wrap gap-24 justify-center">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"

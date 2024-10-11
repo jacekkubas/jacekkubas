@@ -24,7 +24,6 @@ const Model = () => {
       Math.abs(pointer.x) > Math.abs(pointer.y)
         ? Math.abs(pointer.x)
         : Math.abs(pointer.y < -1 ? -1 : pointer.y);
-    console.log(y);
 
     const curPosX = camera.position.x;
     const curPosY = camera.position.y;
@@ -47,7 +46,6 @@ const Model = () => {
     //top bottom
     camera.position.y = curPosY + (finalPosY - curPosY) * alpha;
     camera.rotation.x = curRotX + (finalRotX - curRotX) * alpha;
-    console.log(curRotX + (finalRotX - curRotX) * alpha);
 
     // in out
     camera.position.z = curPosZ + (finalPosZ - curPosZ) * alpha;
