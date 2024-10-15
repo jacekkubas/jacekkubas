@@ -11,14 +11,12 @@ import { useFrame, useThree } from "@react-three/fiber";
 
 const Model = () => {
   const mesh1 = useRef<Mesh>(null);
-  const mesh2 = useRef<Mesh>(null);
-  const mesh3 = useRef<Mesh>(null);
-  const { nodes } = useGLTF("/shapes.glb");
+  const { nodes } = useGLTF("/cube.glb");
   const { viewport, camera, pointer } = useThree();
   const cameraZ = 5;
 
   useFrame(() => {
-    const alpha = 0.01;
+    const alpha = 0.05;
 
     let y =
       Math.abs(pointer.x) > Math.abs(pointer.y)
@@ -59,14 +57,6 @@ const Model = () => {
       mesh1.current.rotation.x += 0.008;
       mesh1.current.rotation.y -= 0.008;
     }
-    if (mesh2 && mesh2.current) {
-      mesh2.current.rotation.x += 0.008;
-      mesh2.current.rotation.y += 0.008;
-    }
-    if (mesh3 && mesh3.current) {
-      mesh3.current.rotation.x -= 0.008;
-      mesh3.current.rotation.y += 0.008;
-    }
   });
 
   const materialProps = {
@@ -83,20 +73,22 @@ const Model = () => {
       <directionalLight intensity={3} position={[-0.5, 3, 2]} />
       <Environment preset="sunset" />
       <Text
-        fontSize={1.1}
-        // fontWeight={100}
-        position={[0, 0, -5]}
-        // font="/DM-Sans.ttf"
+        fontSize={0.8}
+        fontWeight="Thin"
+        position={[0, 0.2, -5]}
+        font="/DM-Sans.ttf"
       >
-        Clear Concepts
+        Website development
       </Text>
-      <mesh ref={mesh1} {...nodes.Cube}>
-        <MeshTransmissionMaterial {...materialProps} />
-      </mesh>
-      <mesh ref={mesh2} {...nodes.Icosphere}>
-        <MeshTransmissionMaterial {...materialProps} />
-      </mesh>
-      <mesh ref={mesh3} {...nodes.Icosphere001}>
+      <Text
+        fontSize={0.4}
+        fontWeight={100}
+        position={[0, -0.9, -5]}
+        font="/DM-Sans.ttf"
+      >
+        by Jacek Kubas
+      </Text>
+      <mesh ref={mesh1} {...nodes.Cube} position={[0, 0.1, 0]}>
         <MeshTransmissionMaterial {...materialProps} />
       </mesh>
     </group>

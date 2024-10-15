@@ -19,9 +19,9 @@ const Home: React.FC = () => {
       <Header />
       <div className="relative pt-24 md:h-screen">
         <GlassHero />
-        <div className="text-center relative text-3xl" style={{ top: "-80px" }}>
+        {/* <div className="text-center relative text-3xl" style={{ top: "-80px" }}>
           Website development by Jacek Kubas
-        </div>
+        </div> */}
       </div>
       <div className="container mx-auto">
         <BigText text="I'm a web developer with over 10 years of experience. I’ve worked on a variety of projects, from small websites to complex digital platforms. This has given me the flexibility to meet both design and technical demands. Let’s work on something great together!" />
