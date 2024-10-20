@@ -71,7 +71,7 @@ const Model = () => {
   return (
     <group scale={viewport.width / 10}>
       <directionalLight intensity={3} position={[-0.5, 3, 2]} />
-      <Environment preset="sunset" />
+      <Environment preset="city" />
       <Text
         fontSize={0.8}
         fontWeight="Thin"

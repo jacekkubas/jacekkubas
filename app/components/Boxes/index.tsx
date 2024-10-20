@@ -15,9 +15,9 @@ const Boxes = () => {
           </svg>
           <div className="font-bold mb-4 text-xl">Research</div>
           <p>
-            I streamline research by setting precise goals, utilizing various
-            methods like interviews and surveys, attentively gathering user
-            insights.
+            I study emerging technologies, user behaviors, and best practices to
+            create efficient, secure, and user-friendly websites and
+            applications that meet modern needs.
           </p>
         </div>
         <div className="p-8 md:p-16 border box-border">
@@ -29,8 +29,9 @@ const Boxes = () => {
           </svg>
           <div className="font-bold mb-4 text-xl">UI Design</div>
           <p>
-            I streamline research by setting precise goals, utilizing various
-            methods like interviews and surveys, attentively gathering.
+            I focus on creating visually appealing, intuitive interfaces that
+            enhance user interaction and improve the overall user experience of
+            a website or application.
           </p>
         </div>
         <div className="p-8 md:p-16 border box-border">
@@ -42,8 +43,9 @@ const Boxes = () => {
           </svg>
           <div className="font-bold mb-4 text-xl">Web Development</div>
           <p>
-            I streamline research by setting precise goals, utilizing various
-            methods like interviews.
+            I approach web development as the process of building, creating, and
+            maintaining websites, handling everything from coding and design to
+            content management and security.
           </p>
         </div>
       </div>

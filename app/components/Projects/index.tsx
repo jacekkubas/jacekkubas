@@ -6,6 +6,12 @@ import { motion } from "framer-motion";
 import Link from "./Link";
 
 const data = [
+  // {
+  //   name: "Holiday Pirates",
+  //   description:
+  //     "Travel search platform for millions of enthusiasts, explorers, and holiday makers",
+  //   link: "https://www.holidaypirates.com/",
+  // },
   {
     name: "Kewpie",
     description: "Japan’s No.1 mayonnaise, crafted in Europe.",

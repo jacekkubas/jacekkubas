@@ -1,11 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./style.css";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLinkHovered, setIsLinkHovered] = useState(false);
+  const linksRef = useRef([]);
 
   const handleHamburgerClick = () => {
     setIsOpen(!isOpen);
@@ -16,7 +17,19 @@ const Header = () => {
   };
 
   const handleMouseOver = (e: React.MouseEvent) => {
-    console.log(e);
+    Object.values(linksRef.current).forEach((node) => {
+      if (e.target !== node) {
+        node.classList.add("blur");
+      } else {
+        node.classList.add("hovered");
+      }
+    });
+  };
+
+  const handleMouseOut = () => {
+    Object.values(linksRef.current).forEach((node) => {
+      node.classList.remove("blur", "hovered");
+    });
   };
 
   return (
@@ -73,48 +86,56 @@ const Header = () => {
                 <ul className="text-white text-8xl leading-relaxed text-right">
                   <li>
                     <a
-                      className="transition-all"
+                      ref={(node) => (linksRef.current["home"] = node)}
+                      className="transition-all opacity-90"
                       href="#home"
                       onClick={handleClose}
                       onMouseOver={(e) => {
                         handleMouseOver(e);
                       }}
+                      onMouseOut={handleMouseOut}
                     >
                       Home
                     </a>
                   </li>
                   <li>
                     <a
-                      className="transition-all"
+                      ref={(node) => (linksRef.current["about"] = node)}
+                      className="transition-all opacity-90"
                       href="#about"
                       onClick={handleClose}
                       onMouseOver={(e) => {
                         handleMouseOver(e);
                       }}
+                      onMouseOut={handleMouseOut}
                     >
                       About
                     </a>
                   </li>
                   <li>
                     <a
-                      className="transition-all"
+                      ref={(node) => (linksRef.current["projects"] = node)}
+                      className="transition-all opacity-90"
                       href="#projects"
                       onClick={handleClose}
                       onMouseOver={(e) => {
                         handleMouseOver(e);
                       }}
+                      onMouseOut={handleMouseOut}
                     >
                       Projects
                     </a>
                   </li>
                   <li>
                     <a
-                      className="transition-all"
+                      ref={(node) => (linksRef.current["contact"] = node)}
+                      className="transition-all opacity-90"
                       href="#contact"
                       onClick={handleClose}
                       onMouseOver={(e) => {
                         handleMouseOver(e);
                       }}
+                      onMouseOut={handleMouseOut}
                     >
                       Contact
                     </a>
