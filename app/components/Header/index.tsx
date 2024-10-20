@@ -5,8 +5,7 @@ import "./style.css";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLinkHovered, setIsLinkHovered] = useState(false);
-  const linksRef = useRef([]);
+  const linksRef = useRef<HTMLAnchorElement[]>([]);
 
   const handleHamburgerClick = () => {
     setIsOpen(!isOpen);
@@ -17,7 +16,7 @@ const Header = () => {
   };
 
   const handleMouseOver = (e: React.MouseEvent) => {
-    Object.values(linksRef.current).forEach((node) => {
+    Object.values(linksRef.current).forEach((node: HTMLElement) => {
       if (e.target !== node) {
         node.classList.add("blur");
       } else {
@@ -27,7 +26,7 @@ const Header = () => {
   };
 
   const handleMouseOut = () => {
-    Object.values(linksRef.current).forEach((node) => {
+    Object.values(linksRef.current).forEach((node: HTMLElement) => {
       node.classList.remove("blur", "hovered");
     });
   };
@@ -86,9 +85,13 @@ const Header = () => {
                 <ul className="text-white text-8xl leading-relaxed text-right">
                   <li>
                     <a
-                      ref={(node) => (linksRef.current["home"] = node)}
-                      className="transition-all opacity-90"
                       href="#home"
+                      ref={(node) => {
+                        if (node) {
+                          linksRef.current[1] = node;
+                        }
+                      }}
+                      className="transition-all opacity-90"
                       onClick={handleClose}
                       onMouseOver={(e) => {
                         handleMouseOver(e);
@@ -100,7 +103,11 @@ const Header = () => {
                   </li>
                   <li>
                     <a
-                      ref={(node) => (linksRef.current["about"] = node)}
+                      ref={(node) => {
+                        if (node) {
+                          linksRef.current[2] = node;
+                        }
+                      }}
                       className="transition-all opacity-90"
                       href="#about"
                       onClick={handleClose}
@@ -114,7 +121,11 @@ const Header = () => {
                   </li>
                   <li>
                     <a
-                      ref={(node) => (linksRef.current["projects"] = node)}
+                      ref={(node) => {
+                        if (node) {
+                          linksRef.current[3] = node;
+                        }
+                      }}
                       className="transition-all opacity-90"
                       href="#projects"
                       onClick={handleClose}
@@ -128,7 +139,11 @@ const Header = () => {
                   </li>
                   <li>
                     <a
-                      ref={(node) => (linksRef.current["contact"] = node)}
+                      ref={(node) => {
+                        if (node) {
+                          linksRef.current[4] = node;
+                        }
+                      }}
                       className="transition-all opacity-90"
                       href="#contact"
                       onClick={handleClose}

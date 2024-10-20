@@ -18,7 +18,7 @@ const Model = () => {
   useFrame(() => {
     const alpha = 0.05;
 
-    let y =
+    const y =
       Math.abs(pointer.x) > Math.abs(pointer.y)
         ? Math.abs(pointer.x)
         : Math.abs(pointer.y < -1 ? -1 : pointer.y);

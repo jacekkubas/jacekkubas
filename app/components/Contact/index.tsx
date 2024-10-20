@@ -7,7 +7,7 @@ const Contact = () => {
         Thinking about a project?
       </div>
       <a href="mailto:jacenty.kubas@gmail.com" className="glow-on-hover">
-        Let's talk
+        Let&apos;s talk
       </a>
     </div>
   );

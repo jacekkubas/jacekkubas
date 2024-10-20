@@ -9,7 +9,7 @@ import { Mesh } from "three";
 import { useFrame, useThree } from "@react-three/fiber";
 // import { useControls } from "leva";
 
-const Model = ({ reverse }: { reverse: boolean }) => {
+const Model = ({ reverse }: { reverse: boolean | undefined }) => {
   const mesh1 = useRef<Mesh>(null);
   const { nodes } = useGLTF("/shapes.glb");
   const { viewport } = useThree();
