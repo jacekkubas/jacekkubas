@@ -17,8 +17,8 @@ const Model = ({ reverse }: { reverse: boolean | undefined }) => {
 
   useFrame(() => {
     if (mesh1 && mesh1.current && isHovering) {
-      mesh1.current.rotation.x += 0.004;
-      mesh1.current.rotation.y -= 0.004;
+      mesh1.current.rotation.x += 0.008;
+      mesh1.current.rotation.y -= 0.008;
     }
   });
 

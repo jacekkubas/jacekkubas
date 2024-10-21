@@ -25,13 +25,12 @@ const data = [
   {
     name: "Foundry",
     description:
-      "Creatively driven makers, building leading brands that stand the test of time.",
+      "Creative agency from Zuirch, building leading brands in DACH region.",
     link: "https://foundry.ch",
   },
   {
     name: "Alpian",
-    description:
-      "Learn what school failed to teach you: Managing your finances.",
+    description: "The first Swiss digital private bank.",
     link: "https://www.blog.alpian.com/",
   },
   {

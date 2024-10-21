@@ -16,7 +16,7 @@ const Model = () => {
   const cameraZ = 5;
 
   useFrame(() => {
-    const alpha = 0.05;
+    const alpha = 0.02;
 
     const y =
       Math.abs(pointer.x) > Math.abs(pointer.y)
@@ -54,8 +54,8 @@ const Model = () => {
 
   useFrame(() => {
     if (mesh1 && mesh1.current) {
-      mesh1.current.rotation.x += 0.008;
-      mesh1.current.rotation.y -= 0.008;
+      mesh1.current.rotation.x += 0.005;
+      mesh1.current.rotation.y -= 0.005;
     }
   });
 

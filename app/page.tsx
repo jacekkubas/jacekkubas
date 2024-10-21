@@ -32,7 +32,7 @@ const Home: React.FC = () => {
         </div> */}
       </div>
       <div className="container mx-auto">
-        <BigText text="I'm a web developer with over 10 years of experience. I’ve worked on a variety of projects, from small websites to complex digital platforms. This has given me the flexibility to meet both design and technical demands. Let’s work on something great together!" />
+        <BigText text="I'm a web developer with over 10 years of experience. I’ve worked on a variety of international projects, from small websites to complex digital platforms. This has given me the flexibility to meet both design and technical demands. Let’s work on something great together!" />
       </div>
       <div className="container mx-auto">
         <Boxes />
