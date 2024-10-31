@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const font = localFont({
   src: "/fonts/DM-Sans.ttf",
@@ -19,6 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="G-M7Q6NJ7295" />
       <body className={`${font.className} antialiased`} id="home">
         {children}
       </body>

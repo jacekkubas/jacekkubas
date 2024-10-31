@@ -17,7 +17,9 @@ const Scene = ({
           reverse ? "flex-row-reverse" : ""
         }`}
       >
-        <div className="w-1/3 py-24 text-xl leading-relaxed">{text}</div>
+        <div className="w-1/3 py-24 text-xl leading-relaxed font-bold">
+          {text}
+        </div>
         <div className="w-2/3">
           <Canvas
             camera={{ fov: 25, zoom: 1.5 }}

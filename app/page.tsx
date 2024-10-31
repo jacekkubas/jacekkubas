@@ -32,7 +32,7 @@ const Home: React.FC = () => {
         </div> */}
       </div>
       <div className="container mx-auto">
-        <BigText text="I'm a web developer with over 10 years of experience. I’ve worked on a variety of international projects, from small websites to complex digital platforms. This has given me the flexibility to meet both design and technical demands. Let’s work on something great together!" />
+        <BigText text="I'm a web developer with over 10 years of experience. I've worked on a variety of international projects, from small websites to complex digital platforms. This has given me the flexibility to meet both design and technical demands. Let’s work on something great together!" />
       </div>
       <div className="container mx-auto">
         <Boxes />
@@ -41,10 +41,10 @@ const Home: React.FC = () => {
         <TechStack />
       </div>
 
-      <Globe text="As a web developer, I've had the privilege of working with a diverse range of clients from across the globe. My portfolio includes projects for businesses and individuals from countries such as Poland, Germany, Switzerland, Italy, the UK, Japan, Ukraine, Luxembourg, Sweden, South Africa, and Norway. This international experience has enriched my approach, allowing me to adapt to different cultural needs, design preferences, and business practices, ensuring that each client receives a website that resonates with their target audience." />
+      <Globe text="As a registered freelancer in Austria, I'm excited to collaborate with local and international clients. In the past I've had the privilege of working with clients worldwide, including those from Germany, Poland, Switzerland, Italy, the UK, Japan, Ukraine, Luxembourg, Sweden, South Africa, and Norway. Wide range of clients has helped me adapt to different cultural needs, design styles, and business practices. This enables me to deliver websites that resonate deeply with each client's unique audience." />
       <Globe
         reverse
-        text="Working with clients from such varied regions has also given me insight into global market trends and technical expectations. Whether it's understanding the minimalist design preferences in Northern Europe or creating more dynamic, interactive sites for markets like Japan or South Africa, I ensure that each website is tailored to both local tastes and international standards. This experience has not only broadened my technical skill set but has also deepened my ability to communicate effectively across cultural and linguistic barriers, making each project a seamless experience for my clients."
+        text="Working with clients from such varied regions has also given me insight into global market trends and technical expectations. Each website is tailored to both local tastes and international standards. This experience has not only broadened my technical skill set but has also deepened my ability to communicate effectively across cultural and linguistic barriers, making each project a seamless experience for my clients."
       />
 
       <Projects />
