@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" style={{ background: "#000" }}>
       <GoogleTagManager gtmId="G-M7Q6NJ7295" />
       <body className={`${font.className} antialiased`} id="home">
         {children}

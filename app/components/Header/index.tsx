@@ -58,7 +58,7 @@ const Header = () => {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="w-1/2 bg-white opacity-80"
+              className="hidden lg:block w-1/2 bg-white opacity-60"
               animate={{
                 height: isOpen ? "100%" : 0,
               }}
@@ -71,7 +71,7 @@ const Header = () => {
               <div className="p-16"></div>
             </motion.div>
             <motion.div
-              className="w-1/2 bg-black self-end opacity-80"
+              className="w-full lg:w-1/2 lg:bg-black self-end opacity-60 flex items-center justify-center"
               animate={{
                 height: isOpen ? "100%" : 0,
               }}
@@ -82,7 +82,7 @@ const Header = () => {
               exit={{ height: 0 }}
             >
               <div className="p-16 pt-20 box-border">
-                <ul className="text-white text-8xl leading-relaxed text-right">
+                <ul className="text-white text-4xl md:text-6xl lg:text-8xl leading-relaxed md:leading-relaxed lg:leading-relaxed text-center lg:text-right">
                   <li>
                     <a
                       href="#home"

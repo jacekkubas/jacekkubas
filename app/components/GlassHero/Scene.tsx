@@ -5,7 +5,10 @@ import Model from "./Model";
 
 const Scene = () => {
   return (
-    <Canvas style={{ backgroundColor: "#000" }} camera={{ fov: 25 }}>
+    <Canvas
+      style={{ backgroundColor: "#000", minHeight: "450px" }}
+      camera={{ fov: 25 }}
+    >
       <Model />
     </Canvas>
   );

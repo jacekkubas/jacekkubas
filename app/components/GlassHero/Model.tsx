@@ -11,7 +11,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 
 const Model = () => {
   const mesh1 = useRef<Mesh>(null);
-  const { nodes } = useGLTF("/shapes.glb");
+  const { nodes } = useGLTF("/cube.glb");
   const { viewport, camera, pointer } = useThree();
   const cameraZ = 5;
 
@@ -73,22 +73,22 @@ const Model = () => {
       <directionalLight intensity={3} position={[-0.5, 3, 2]} />
       <Environment preset="city" />
       <Text
-        fontSize={2}
+        fontSize={0.8}
         fontWeight="Thin"
         position={[0, 0.2, -5]}
         font="/DM-Sans.ttf"
       >
-        JK
+        Website development
       </Text>
-      {/* <Text
+      <Text
         fontSize={0.4}
         fontWeight={100}
         position={[0, -0.9, -5]}
         font="/DM-Sans.ttf"
       >
         by Jacek Kubas
-      </Text> */}
-      <mesh ref={mesh1} {...nodes.Icosphere} position={[0, 0.1, 0]}>
+      </Text>
+      <mesh ref={mesh1} {...nodes.Cube} position={[0, 0.1, 0]}>
         <MeshTransmissionMaterial {...materialProps} />
       </mesh>
     </group>

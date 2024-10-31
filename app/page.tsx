@@ -1,25 +1,12 @@
-import dynamic from "next/dynamic";
 import Header from "./components/Header";
 import TechStack from "./components/TechStack";
 import BigText from "./components/BigText";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import PreviewHero from "./components/GlassHero/Preview";
 import Boxes from "./components/Boxes";
-
-const GlassHero = dynamic(() => import("./components/GlassHero/Scene"), {
-  ssr: false,
-  loading: () => <PreviewHero />,
-});
-
-const Globe = dynamic(() => import("./components/Globe/Scene"), {
-  ssr: false,
-  loading: () => <PreviewHero />,
-});
-
-const Projects = dynamic(() => import("./components/Projects"), {
-  ssr: false,
-});
+import GlassHero from "./components/GlassHero";
+import Globe from "./components/Globe";
+import Projects from "./components/Projects";
 
 const Home: React.FC = () => {
   return (
