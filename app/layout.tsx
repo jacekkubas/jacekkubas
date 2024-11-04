@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
 
 const font = localFont({
   src: "/fonts/DM-Sans.ttf",
@@ -20,7 +20,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" style={{ background: "#000" }}>
-      <GoogleTagManager gtmId="G-M7Q6NJ7295" />
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-M7Q6NJ7295"
+      />
+      <Script id="gtm" strategy="afterInteractive">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-M7Q6NJ7295');
+      `}
+      </Script>
       <body className={`${font.className} antialiased`} id="home">
         {children}
       </body>
