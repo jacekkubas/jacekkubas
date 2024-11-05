@@ -17,7 +17,7 @@ const Scene = ({
           reverse ? "lg:flex-row-reverse" : "lg:flex-row"
         }`}
       >
-        <div className="lg:w-1/2 xl:w-1/3 w-full lg:py-24 text-xl leading-relaxed font-bold">
+        <div className="lg:w-1/2 xl:w-1/3 w-full lg:py-24 text-xl leading-relaxed">
           {text}
         </div>
         <div className="lg:w-1/2 xl:w-2/3 w-full flex items-center">
