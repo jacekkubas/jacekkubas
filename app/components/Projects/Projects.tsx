@@ -28,11 +28,11 @@ const data = [
       "Creative agency from Zuirch, building leading brands in DACH region.",
     link: "https://foundry.ch",
   },
-  {
-    name: "Alpian",
-    description: "The first Swiss digital private bank.",
-    link: "https://www.blog.alpian.com/",
-  },
+  // {
+  //   name: "Alpian",
+  //   description: "The first Swiss digital private bank.",
+  //   link: "https://www.blog.alpian.com/",
+  // },
   {
     name: "Globfone",
     description:
