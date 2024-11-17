@@ -3,11 +3,14 @@ import "./style.css";
 
 const TechStack = () => {
   return (
-    <div className="py-24">
-      <h2 className="text-5xl mb-24">Cutting-Edge Tech Stack</h2>
-      <div className="flex flex-wrap gap-24">
-        <div>
+    <div className="md:py-24">
+      <h2 className="text-5xl mb-12 md:mb-24 leading-normal">
+        Cutting-Edge Tech Stack
+      </h2>
+      <div className="flex flex-wrap md:gap-24">
+        <div className="w-1/2 md:w-auto mb-12 md:mb-0">
           <svg
+            className="mx-0"
             xmlns="http://www.w3.org/2000/svg"
             width="39"
             height="40"
@@ -21,8 +24,9 @@ const TechStack = () => {
           </svg>
           <div>Next.js</div>
         </div>
-        <div>
+        <div className="w-1/2 md:w-auto mb-12 md:mb-0">
           <svg
+            className="mx-0"
             xmlns="http://www.w3.org/2000/svg"
             width="40"
             height="41"
@@ -91,8 +95,9 @@ const TechStack = () => {
           </svg>
           <div>Postgres</div>
         </div>
-        <div>
+        <div className="w-1/2 md:w-auto mb-12 md:mb-0">
           <svg
+            className="mx-0"
             xmlns="http://www.w3.org/2000/svg"
             width="51"
             height="43"
@@ -138,8 +143,9 @@ const TechStack = () => {
           </svg>
           <div>Redis</div>
         </div>
-        <div>
+        <div className="w-1/2 md:w-auto mb-12 md:mb-0">
           <svg
+            className="mx-0"
             xmlns="http://www.w3.org/2000/svg"
             width="39"
             height="45"
@@ -157,8 +163,9 @@ const TechStack = () => {
           </svg>
           <div>Node.js</div>
         </div>
-        <div>
+        <div className="w-1/2 md:w-auto mb-12 md:mb-0">
           <svg
+            className="mx-0"
             xmlns="http://www.w3.org/2000/svg"
             width="40"
             height="36"
@@ -176,8 +183,9 @@ const TechStack = () => {
           </svg>
           <div>React</div>
         </div>
-        <div>
+        <div className="w-1/2 md:w-auto mb-12 md:mb-0">
           <svg
+            className="mx-0"
             xmlns="http://www.w3.org/2000/svg"
             width="36"
             height="35"
@@ -192,8 +200,9 @@ const TechStack = () => {
           </svg>
           <div>JavaScript</div>
         </div>
-        <div>
+        <div className="w-1/2 md:w-auto mb-12 md:mb-0">
           <svg
+            className="mx-0"
             xmlns="http://www.w3.org/2000/svg"
             width="36"
             height="35"
@@ -217,8 +226,9 @@ const TechStack = () => {
           </svg>
           <div>TypeScript</div>
         </div>
-        <div>
+        <div className="w-1/2 md:w-auto mb-12 md:mb-0">
           <svg
+            className="mx-0"
             xmlns="http://www.w3.org/2000/svg"
             width="35"
             height="42"

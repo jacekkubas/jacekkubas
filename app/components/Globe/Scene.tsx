@@ -2,10 +2,11 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
 import Model from "./Model";
+import "./style.css";
 
 const Scene = ({ text, reverse }: { text: string; reverse?: boolean }) => {
   return (
-    <div className="relative py-24">
+    <div className="relative md:py-24">
       <div
         className={`container mx-auto flex flex-col-reverse justify-center ${
           reverse ? "lg:flex-row-reverse" : "lg:flex-row"
@@ -15,10 +16,7 @@ const Scene = ({ text, reverse }: { text: string; reverse?: boolean }) => {
           {text}
         </div>
         <div className="lg:w-1/2 xl:w-2/3 w-full flex items-center">
-          <Canvas
-            camera={{ fov: 25, zoom: 1.5 }}
-            style={{ position: "relative", zIndex: 2, minHeight: "350px" }}
-          >
+          <Canvas camera={{ fov: 25, zoom: 1.5 }} className="canvas">
             <Model reverse={reverse} />
           </Canvas>
         </div>

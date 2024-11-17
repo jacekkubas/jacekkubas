@@ -1,8 +1,9 @@
 import React from "react";
+import "./style.css";
 
 const Preview = () => {
   return (
-    <div className="flex items-center justify-center h-screen text-9xl text-gray-300 title">
+    <div className="canvas flex items-center justify-center md:h-screen text-9xl text-gray-300 title">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="88"

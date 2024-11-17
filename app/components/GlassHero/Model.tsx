@@ -68,8 +68,12 @@ const Model = () => {
     transmission: 1,
   };
 
+  console.log(window.innerWidth);
+
   return (
-    <group scale={viewport.width / 10}>
+    <group
+      scale={window.innerWidth > 767 ? viewport.width / 10 : viewport.width / 7}
+    >
       <directionalLight intensity={3} position={[-0.5, 3, 2]} />
       <Environment preset="city" />
       <Text

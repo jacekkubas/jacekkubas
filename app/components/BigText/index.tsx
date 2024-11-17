@@ -16,7 +16,7 @@ const BigText = ({ text }: { text: string }) => {
     <div id="about">
       <p
         ref={paragraph}
-        className="py-24 mx-auto text-4xl flex flex-wrap md:text-6xl"
+        className="md:py-24 mx-auto text-4xl flex flex-wrap md:text-6xl"
         style={{
           lineHeight: 1.15,
         }}

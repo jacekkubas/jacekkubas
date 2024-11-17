@@ -32,7 +32,9 @@ const Model = ({ reverse }: { reverse: boolean | undefined }) => {
   };
 
   return (
-    <group scale={viewport.width / 7}>
+    <group
+      scale={window.innerWidth > 767 ? viewport.width / 7 : viewport.width / 5}
+    >
       <Environment
         preset="city"
         backgroundBlurriness={1}

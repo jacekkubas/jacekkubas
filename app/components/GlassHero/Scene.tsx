@@ -2,13 +2,11 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
 import Model from "./Model";
+import "./style.css";
 
 const Scene = () => {
   return (
-    <Canvas
-      style={{ backgroundColor: "#000", minHeight: "450px" }}
-      camera={{ fov: 25 }}
-    >
+    <Canvas className="canvas" camera={{ fov: 25 }}>
       <Model />
     </Canvas>
   );

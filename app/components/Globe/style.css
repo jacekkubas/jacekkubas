@@ -1,0 +1,18 @@
+.canvas {
+  background-color: #000;
+  min-height: 350px;
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .canvas {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+  }
+
+  .canvas canvas {
+    min-height: 300px;
+  }
+}
