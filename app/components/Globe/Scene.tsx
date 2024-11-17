@@ -3,13 +3,7 @@ import React from "react";
 import { Canvas } from "@react-three/fiber";
 import Model from "./Model";
 
-const Scene = ({
-  text,
-  reverse,
-}: {
-  text: string;
-  reverse?: boolean | undefined;
-}) => {
+const Scene = ({ text, reverse }: { text: string; reverse?: boolean }) => {
   return (
     <div className="relative py-24">
       <div
