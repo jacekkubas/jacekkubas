@@ -1,4 +1,4 @@
-.canvas {
+.canvas-wrapper {
   background-color: #000;
   min-height: 350px;
   position: relative;
@@ -6,13 +6,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .canvas {
+  .canvas-wrapper {
     min-height: 300px;
     display: flex;
     align-items: center;
   }
 
-  .canvas canvas {
+  .canvas-wrapper canvas {
     min-height: 300px;
   }
 }

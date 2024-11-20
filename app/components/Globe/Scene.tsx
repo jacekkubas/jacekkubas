@@ -16,7 +16,7 @@ const Scene = ({ text, reverse }: { text: string; reverse?: boolean }) => {
           {text}
         </div>
         <div className="lg:w-1/2 xl:w-2/3 w-full flex items-center">
-          <Canvas camera={{ fov: 25, zoom: 1.5 }} className="canvas">
+          <Canvas camera={{ fov: 25, zoom: 1.5 }} className="canvas-wrapper">
             <Model reverse={reverse} />
           </Canvas>
         </div>

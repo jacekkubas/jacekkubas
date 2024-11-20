@@ -7,7 +7,6 @@ import {
 } from "@react-three/drei";
 import { Mesh } from "three";
 import { useFrame, useThree } from "@react-three/fiber";
-// import { useControls } from "leva";
 
 const Model = () => {
   const mesh1 = useRef<Mesh>(null);
@@ -67,8 +66,6 @@ const Model = () => {
     thickness: 0.2,
     transmission: 1,
   };
-
-  console.log(window.innerWidth);
 
   return (
     <group

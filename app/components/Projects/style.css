@@ -1,12 +1,7 @@
-.image-wrapper {
-  position: relative;
-}
-
 .image {
   width: 337px;
   height: 450px;
   background-color: transparent;
-  /* position: absolute; */
   top: 0;
   left: 0;
   display: none;
@@ -48,10 +43,5 @@
     border-bottom: solid 1px #d1d5db;
     opacity: 0;
     transition: opacity 0.3s;
-  }
-
-  div {
-    position: relative;
-    z-index: 2;
   }
 }

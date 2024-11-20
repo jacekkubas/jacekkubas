@@ -75,7 +75,7 @@ const Projects = () => {
   const { x, y, target } = useMousePosition();
 
   useEffect(() => {
-    if (target instanceof HTMLElement && target.closest(".image-wrapper")) {
+    if (target instanceof HTMLElement && target.closest("#image-wrapper")) {
       if (!target.dataset.image) return;
       image.current.classList.add("active");
       image.current.style.backgroundImage = `url('${target.dataset.image}')`;
@@ -87,7 +87,7 @@ const Projects = () => {
   return (
     <div className="overflow-hidden" id="projects">
       <div className="container mx-auto">
-        <div className="py-24 image-wrapper">
+        <div className="py-24 relative" id="image-wrapper">
           <h2 className="text-5xl mb-16">Selected Works</h2>
           <div className="border-t border-gray-500">
             <motion.div

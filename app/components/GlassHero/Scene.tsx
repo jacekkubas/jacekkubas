@@ -6,7 +6,7 @@ import "./style.css";
 
 const Scene = () => {
   return (
-    <Canvas className="canvas" camera={{ fov: 25 }}>
+    <Canvas className="canvas-wrapper" camera={{ fov: 25 }}>
       <Model />
     </Canvas>
   );

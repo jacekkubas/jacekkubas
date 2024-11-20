@@ -16,8 +16,10 @@ const Link = ({
       target="_blank"
       data-image={`/projects/${data.name.replace(/ /g, "")}.jpg`}
     >
-      <div>{data.name}</div>
-      <div className="text-base mt-2 text-gray-500">{data.description}</div>
+      <div className="relative">
+        <div>{data.name}</div>
+        <div className="text-base mt-2 text-gray-500">{data.description}</div>
+      </div>
     </a>
   );
 };
