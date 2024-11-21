@@ -6,6 +6,12 @@ Explore the codebase to see how I've integrated these technologies to create a p
 
 ## How to use it
 
+First install the dependencies:
+
+```bash
+npm install
+```
+
 To run the development server:
 
 ```bash
@@ -16,6 +22,12 @@ To build:
 
 ```bash
 npm run build
+```
+
+to start production server:
+
+```bash
+npm run start
 ```
 
 Page hosted on Vercel https://jacekkubas.com
