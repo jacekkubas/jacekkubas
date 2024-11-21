@@ -17,7 +17,7 @@ const Link = ({
       data-image={`/projects/${data.name.replace(/ /g, "")}.jpg`}
     >
       <div className="relative">
-        <div>{data.name}</div>
+        <h3>{data.name}</h3>
         <div className="text-base mt-2 text-gray-500">{data.description}</div>
       </div>
     </a>

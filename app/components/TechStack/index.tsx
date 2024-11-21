@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const TechStack = () => {
   return (
-    <div className="md:py-24">
+    <section className="md:py-24">
       <h2 className="text-5xl mb-12 md:mb-24 leading-normal">
         Cutting-Edge Tech Stack
       </h2>
@@ -97,7 +97,7 @@ const TechStack = () => {
           <div>Prisma</div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

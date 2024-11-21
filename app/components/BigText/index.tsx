@@ -13,7 +13,7 @@ const BigText = ({ text }: { text: string }) => {
   const words = text.split(" ");
 
   return (
-    <div id="about">
+    <section id="about">
       <p
         ref={paragraph}
         className="md:py-24 mx-auto text-4xl flex flex-wrap md:text-6xl"
@@ -35,7 +35,7 @@ const BigText = ({ text }: { text: string }) => {
           );
         })}
       </p>
-    </div>
+    </section>
   );
 };
 

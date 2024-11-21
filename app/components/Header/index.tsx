@@ -32,10 +32,10 @@ const Header = () => {
   };
 
   return (
-    <>
-      <div className="absolute top-5 left-8 md:top-12 md:left-16 z-10 text-xl md:text-2xl font-bold">
+    <header>
+      <h1 className="absolute top-5 left-8 md:top-12 md:left-16 z-10 text-xl md:text-2xl font-bold">
         Jacek Kubas
-      </div>
+      </h1>
       <div
         className={`hamburger top-6 right-8 md:top-12 md:right-16 ${
           isOpen ? "active" : ""
@@ -81,7 +81,7 @@ const Header = () => {
               }}
               exit={{ height: 0 }}
             >
-              <div className="p-16 pt-20 box-border">
+              <nav className="p-16 pt-20 box-border">
                 <ul className="text-white text-4xl md:text-6xl lg:text-8xl leading-relaxed md:leading-relaxed lg:leading-relaxed text-center lg:text-right">
                   <li>
                     <a
@@ -156,12 +156,12 @@ const Header = () => {
                     </a>
                   </li>
                 </ul>
-              </div>
+              </nav>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </header>
   );
 };
 

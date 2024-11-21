@@ -85,7 +85,7 @@ const Projects = () => {
   }, [target, image]);
 
   return (
-    <div className="overflow-hidden" id="projects">
+    <section className="overflow-hidden" id="projects">
       <div className="container mx-auto">
         <div className="py-24 relative" id="image-wrapper">
           <h2 className="text-5xl mb-16">Selected Works</h2>
@@ -109,7 +109,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

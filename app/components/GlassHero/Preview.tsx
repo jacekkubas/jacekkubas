@@ -10,7 +10,7 @@ const Preview = () => {
         src="/svg/loading.svg"
         width="88"
         height="88"
-        alt="Typescript icon"
+        alt="Loading icon"
       />
     </div>
   );

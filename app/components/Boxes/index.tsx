@@ -2,7 +2,7 @@ import React from "react";
 
 const Boxes = () => {
   return (
-    <div className="py-24">
+    <section className="py-24">
       <h2 className="text-5xl mb-16">Methodologies</h2>
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
         <div className="p-8 md:p-16 border box-border">
@@ -16,7 +16,7 @@ const Boxes = () => {
               className="fill-none stroke-white"
             />
           </svg>
-          <div className="font-bold mb-4 text-xl">Research</div>
+          <h3 className="font-bold mb-4 text-xl">Research</h3>
           <p>
             I study emerging technologies, user behaviors, and best practices to
             create efficient, secure, and user-friendly websites and
@@ -34,7 +34,7 @@ const Boxes = () => {
               className="fill-none stroke-white"
             />
           </svg>
-          <div className="font-bold mb-4 text-xl">UI Design</div>
+          <h3 className="font-bold mb-4 text-xl">UI Design</h3>
           <p>
             I focus on creating visually appealing, intuitive interfaces that
             enhance user interaction and improve the overall user experience of
@@ -52,7 +52,7 @@ const Boxes = () => {
               className="fill-none stroke-white"
             />
           </svg>
-          <div className="font-bold mb-4 text-xl">Web Development</div>
+          <h3 className="font-bold mb-4 text-xl">Web Development</h3>
           <p>
             I approach web development as the process of building, creating, and
             maintaining websites, handling everything from coding and design to
@@ -60,7 +60,7 @@ const Boxes = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
