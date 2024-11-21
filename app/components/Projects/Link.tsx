@@ -18,7 +18,7 @@ const Link = ({
     >
       <div className="relative">
         <h3>{data.name}</h3>
-        <div className="text-base mt-2 text-gray-500">{data.description}</div>
+        <div className="text-base mt-2 text-gray-400">{data.description}</div>
       </div>
     </a>
   );
