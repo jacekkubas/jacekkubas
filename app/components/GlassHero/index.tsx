@@ -9,7 +9,11 @@ const GlassHero = () => {
     loading: () => <PreviewHero />,
   });
 
-  return <GlassHero />;
+  return (
+    <section className="relative pt-24 md:h-screen">
+      <GlassHero />
+    </section>
+  );
 };
 
 export default GlassHero;

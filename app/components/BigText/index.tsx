@@ -14,27 +14,29 @@ const BigText = ({ text }: { text: string }) => {
 
   return (
     <section id="about">
-      <p
-        ref={paragraph}
-        className="md:py-24 mx-auto text-4xl flex flex-wrap md:text-6xl"
-        style={{
-          lineHeight: 1.15,
-        }}
-      >
-        {words.map((word, i) => {
-          const start = i / words.length;
-          const end = start + 1 / words.length;
+      <div className="container">
+        <p
+          ref={paragraph}
+          className="md:py-24 mx-auto text-4xl flex flex-wrap md:text-6xl"
+          style={{
+            lineHeight: 1.15,
+          }}
+        >
+          {words.map((word, i) => {
+            const start = i / words.length;
+            const end = start + 1 / words.length;
 
-          return (
-            <Word
-              key={i}
-              text={word}
-              range={[start, end]}
-              progress={scrollYProgress}
-            />
-          );
-        })}
-      </p>
+            return (
+              <Word
+                key={i}
+                text={word}
+                range={[start, end]}
+                progress={scrollYProgress}
+              />
+            );
+          })}
+        </p>
+      </div>
     </section>
   );
 };
