@@ -4,7 +4,9 @@ This is my personal portfolio website, built to showcase my skills, projects, an
 
 Explore the codebase to see how I've integrated these technologies to create a performant, modular, and visually engaging frontend experience.
 
-## How to use it
+Page hosted on Vercel https://jacekkubas.com
+
+## To run it locally
 
 First install the dependencies:
 
@@ -29,5 +31,3 @@ to start production server:
 ```bash
 npm run start
 ```
-
-Page hosted on Vercel https://jacekkubas.com
