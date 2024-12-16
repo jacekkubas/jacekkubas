@@ -34,6 +34,12 @@ const data = [
   //   link: "https://www.blog.alpian.com/",
   // },
   {
+    name: "Yabimo",
+    description:
+      "Leading the world of innovation in the energy and construction industries.",
+    link: "https://yabimo.com/",
+  },
+  {
     name: "Globfone",
     description:
       "Telecommunication services for free to users across the globe",
