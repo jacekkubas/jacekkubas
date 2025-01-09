@@ -35,7 +35,7 @@ const Footer = () => {
             <div>
               <div className="font-bold mb-6">Contact</div>
               <a
-                href="/Jacek_Kubas-CV.pdf"
+                href="/Jacek_Kubas_CV.pdf"
                 target="_blank"
                 className="block mb-4 text-gray-300 hover:text-white"
               >
