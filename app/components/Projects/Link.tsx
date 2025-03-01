@@ -33,7 +33,7 @@ const Link = ({
       href={data.link}
       target="_blank"
       data-image={`/projects/${data.name.replace(/ /g, "")}.jpg`}
-      onMouseEnter={handleMouseOver}
+      onMouseOver={handleMouseOver}
     >
       <div className="relative">
         <h3>{data.name}</h3>
