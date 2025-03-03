@@ -33,6 +33,10 @@ export default function RootLayout({
         gtag('config', 'G-M7Q6NJ7295');
       `}
       </Script>
+      <meta
+        name="google-site-verification"
+        content="EhsMBL5uUlFvoR3ZvledUX8mfQtDxYYYkxlpQCXBfHU"
+      />
       <body className={`${font.className} antialiased`} id="home">
         {children}
       </body>
